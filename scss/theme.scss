@@ -1,0 +1,42 @@
+/*
+  $light:                           #fff !default;
+  $stable:                          #f8f8f8 !default;
+  $positive:                        #387ef5 !default;
+  $calm:                            #11c1f3 !default;
+  $balanced:                        #33cd5f !default;
+  $energized:                       #ffc900 !default;
+  $assertive:                       #ef473a !default;
+  $royal:                           #886aea !default;
+  $dark:                            #444 !default;
+*/
+/*        color changes       */
+
+.searchOfferDetail .head .iconDiv div{
+  width: 33% !important;
+}
+
+.itemDis{
+  background-image: url('../img/ui-assets/big-discount.gif');
+}
+
+.searchListButtonIcon, .not-icon, ion-tabs.tabs-color-active-positive .tab-item.activated, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
+  color: rgb(255,0,0) !important;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item.activated, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
+  background-color: #ccc;
+  border-top: 2px solid;
+}
+.bar.bar-stable, .itemRating, .detail-rating{
+  background-color: rgb(255,0,0) !important;
+  border-color: rgb(255,0,0) !important;
+  .back-button, .title{
+    color: white;
+  }
+}
+
+.logo{
+margin-top: 10px;
+}
+
+// predictive dialer

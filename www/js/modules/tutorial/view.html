@@ -1,0 +1,19 @@
+<ion-content class="no-nav-tab tut" id="htTargetBox">
+    <ion-list>
+      <ion-slide-box on-slide-changed="tut.slideHasChanged($index)">
+        <ion-slide>
+          <div class="" style="height : {{tut.ht}}; background-image: url('img/tutorial/1.jpg');"></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="assertive-bg" style="height : {{tut.ht}}; background-image: url('img/tutorial/2.jpg');"></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="energized-bg" style="height : {{tut.ht}}; background-image: url('img/tutorial/3.jpg');"></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="energized-bg" style="height : {{tut.ht}}; background-image: url('img/tutorial/4.jpg');"></div>
+        </ion-slide>
+      </ion-slide-box>
+      <span class="color-white fontWeight500 fontSize30 tutDone" ng-if="tut.showDone" on-touch="tut.pass()">Done</span>
+    </ion-list>
+</ion-content>

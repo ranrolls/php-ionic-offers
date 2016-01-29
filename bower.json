@@ -1,0 +1,17 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "dependencies": {
+    "angular-gestures": "latest",
+    "ryanmullins-angular-hammer": "latest",
+    "angular-lazy-img": "latest",
+    "angular-cache": "latest",
+    "angular-sanitize": "latest",
+    "angular-toastr": "latest",
+    "ionic-image-lazy-load": "ion-image-lazy-load#*",
+    "ngCordova": "~0.1.23-alpha"
+  },
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.1"
+  }
+}

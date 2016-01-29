@@ -1,0 +1,61 @@
+<ion-view view-title="Settings">
+  <ion-content>
+    <ion-list>
+
+      <!--<ion-toggle ng-model="settings.login" ng-change="userLogin()">-->
+      <!--Login / Logout-->
+      <!--</ion-toggle>-->
+      <!--<ion-item class="item-icon-right" type="item-text-wrap" href="#">-->
+      <!--<h2 ng-change="userLogin()">Login / Logout</h2>-->
+      <!--&lt;!&ndash;<p>option text</p>&ndash;&gt;-->
+      <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+      <!--</ion-item>-->
+
+      <ion-item class="item-icon-right" type="item-text-wrap" ng-href="#/tab/settingsDetail/{{i.alias}}" ng-repeat="i in sc.list">
+      <h2 ng-bind="i.title"></h2>
+      <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+
+      <!--<ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/settingsTerms">-->
+        <!--<h2>Terms of Service</h2>-->
+        <!--&lt;!&ndash;<p>option text</p>&ndash;&gt;-->
+        <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+      <!--</ion-item>-->
+
+      <!--<ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/settingsAbout">-->
+        <!--<h2>About Us</h2>-->
+        <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+      <!--</ion-item>-->
+
+      <!--<ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/settingsFaqs">-->
+        <!--<h2>Faq's & Help</h2>-->
+        <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+      <!--</ion-item>-->
+
+      <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/settingsContact">
+        <h2>Contact Us</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+<!--<ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/settingsProfile">-->
+        <!--<h2>My Profile</h2>-->
+        <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+      <!--</ion-item>-->
+
+      <!--<ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/settingsVersion">-->
+      <!--<h2>Version</h2>-->
+      <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+      <!--</ion-item>-->
+
+
+    </ion-list>
+    <!--<div class="row">-->
+      <!--<button class="col-80 col-offset-10 button button-block button-positive" ng-click="login()">-->
+        <!--Login / Logout-->
+      <!--</button>-->
+    <!--</div>-->
+
+    <!--<br />-->
+    <p class="text-center">Version {{settings.version}}</p>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="Contact Us" hide-back-button="false">
+  <!--<ion-nav-buttons side="left"> &lt;!&ndash; right &ndash;&gt;-->
+    <!--<button href="#/tab/tab.settings" class="button button-icon icon ion-chevron-left icon-accessory"></button>-->
+  <!--</ion-nav-buttons>-->
+  <ion-content class="padding">
+    <form class="list">
+      <label class="item item-input">
+        <input type="text" ng-model="scc.form.name" name="name" placeholder="Name">
+      </label>
+      <label class="item item-input">
+        <input type="email" ng-model="scc.form.email" name="email" placeholder="Feedback Email">
+      </label>
+      <label class="item item-input">
+        <textarea ng-model="scc.form.msg" name="msg" placeholder="Message" style="min-height: 100px;"></textarea>
+      </label>
+
+      <button class="button button-block button-positive" ng-click="scc.submit()">Submit</button>
+
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view view-title="{{sdc.data.title}}" hide-back-button="false" can-swipe-back="true">
+  <!--<ion-nav-buttons side="left">-->
+    <!--<button href="#/tab/tab.settings" class="button button-icon icon ion-chevron-left icon-accessory"></button>-->
+  <!--</ion-nav-buttons>-->
+  <ion-content class="padding">
+    <div class="row">
+      <div class="col" ng-bind-html="sdc.data.introtext"></div>
+    </div>
+    <div class="row">
+      <div class="col" ng-bind-html="sdc.data.fulltext"></div>
+    </div>
+  </ion-content>
+</ion-view>

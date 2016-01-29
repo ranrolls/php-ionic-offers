@@ -1,0 +1,315 @@
+@import "scss/customVariable", "scss/helperClasses", "scss/theme", "scss/customMixins";
+
+//    extra assets like button outside every view
+
+.searchListButtonIcon{
+
+  border-radius: 50px 0 0 50px;
+  border-width: 0;
+  min-height: 35px;
+  font-size: 30px;
+  top: 4px;
+  right: 0px;
+  color: white !important;
+  position: absolute;
+  font-weight: 700;
+  display: inline;
+  z-index: 11;
+  max-height: 36px;
+  padding-left: 40px;
+  padding-right: 3px;
+
+  //border-radius: 50px 0px 0px 50px;
+  //border-width: 0px;
+  //color: #fff;
+  //background: #fff;
+  //font-size: 16px;
+  //min-height: 35px;
+  //top: 4px;
+  //right: -160px;
+  //width: 200px;
+  //background-image: url('../img/ui-assets/searchIcon.png');
+  //background-repeat: no-repeat;
+  //background-size: 30px;
+  //background-position: 5px;
+  ////right: -20px;
+  //position: absolute;
+  //font-weight: 700;
+  //display: inline;
+  //z-index: 11;
+  //max-height: 36px;
+  //padding-left: 40px;
+  //padding-right: 3px;
+  //input.searchKey{
+  //  display: inline;
+  //  max-height: 30px;
+  //  margin-top: -13px;
+  //  margin-left: -10px;
+  //}
+}
+
+
+
+//      notification area
+.not-icon{
+  i{
+    font-size: 200px;
+    display: block;
+  }
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+//          Search Store Detail
+.searchStoreDetail {
+  .customTabs {
+    margin-top: 0px;
+    padding: 0px !important;
+    > .col {
+      border-right: 1px solid;
+    }
+    > .col:last-child {
+      border-right: 0px solid;
+    }
+    .active {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+//          Search Offer Detail
+.searchOfferDetail {
+  .detail-rating{
+    //background-image: url('../img/ui-assets/rating-transparent.png');
+    min-height: 30px;
+    padding: 0px 10px;
+  }
+  .head {
+    width: 100%;
+    display: block;
+    position: relative;
+    color: white;
+    .row {
+
+    }
+    .detail {
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      top: 35%;
+      > * {
+        display: block;
+        clear: both;
+      }
+    }
+    .iconDiv {
+      div {
+        display: block;
+        float: left;
+        width: 20%;
+      }
+    }
+  }
+  .tag {
+    margin: 5px;
+    padding: 10px;
+  }
+  div.dist {
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background: white;
+  }
+  div.dir {
+    right: 10px;
+    background: white;
+    top: 10px;
+    padding: 20px;
+    font-size: 50px;
+  }
+}
+
+//          Main Home list Page
+.listPage {
+  //.searchIcon{
+  //  color: green;
+  //  font-size: 50px;
+  //  top: -20px;
+  //  left: 0px;
+  //  position: absolute;
+  //  font-weight: 700;
+  //  width: 40px;
+  //  display: inline;
+  //  background: black;
+  //}
+
+      .inner {
+        display: inline;
+        float: left;
+        position: relative;
+        margin-right: 10px;
+        width: 300px;
+        height: 200px;
+        background-size: cover;
+        background-color: red;
+
+        .itemAtr {
+          @extend .posAbsolute;
+          @extend .fontSize22;
+          @extend .width100;
+          text-align: center;
+          color: white;
+          padding: 0px 5px;
+        }
+        .itemName {
+          top: 70px;
+          @extend .fontSize24, .fontWeight500;
+          //text-shadow: 1px 1px 1px #ccc;
+        }
+        .itemRating{
+          bottom: 3px;
+          left: 10px;
+          max-width: 50px;
+          min-height: 30px;
+          line-height: 30px;
+        }
+        .itemDesc {
+          top: 100px; font-size: 14px !important;
+        }
+
+        .itemDis {
+          background-repeat: no-repeat;
+          bottom: -15px;
+          right: -9px;
+          text-align: right;
+          background-size: 100px 55px;
+          height: 52px;
+          line-height: 28px;
+          background-position: right;
+          padding-right: 10px;
+        }
+      }
+
+
+
+  .listTopTabs {
+
+    img.all {
+      box-shadow: 3px 0px 3px #ccc;
+      padding-top: 5px;
+    }
+
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
+    height: 55px;
+    box-shadow: 0px 5px 5px #ccc;
+
+    i.all {
+      font-size: 60px;
+      margin-left: 10px;
+    }
+
+    ion-scroll {
+      height: 54px;
+      margin-left: 50px;
+      margin-top: -56px;
+    }
+
+    span.navBtn {
+      min-width: 50px;
+      //@extend .margin-horizontal-5;
+      //overflow: visible;
+      //span {
+      //  height: 50px;
+      //}
+      height: 53px;
+      text-align: center;
+    }
+  }
+
+  .product-list {
+    .scroll {
+      @extend .width100;
+
+      .product-list-item {
+        @extend .width-50;
+        @extend .fl;
+        a.item-content {
+          @extend .padding-3;
+        }
+      }
+    }
+  }
+}
+
+//    tut
+
+.tutDone{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+}
+
+.tut{
+  ion-slide > div{
+    background-size: cover;
+  }
+}
+
+//      helpers
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  margin: 0 10px;
+  min-width: 30px;
+  height: 43px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.searchPage {
+
+  span.type {
+    min-height: 60px;
+  }
+
+}
+
+.splashBg {
+  //background-image: url('../img/ca/splash.png');
+  background-image: url('../img/ca/splash-screen.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+}
+
+.title-center {
+  width: 100% !important;
+  text-align: center !important;
+  display: block !important;
+  z-index: 0 !important;
+  left: 0px !important;
+}
+
+
+//span.toggleInputType {
+//  position: absolute;
+//  right: 10px;
+//  top: 10px;
+//  font-size: $formElementSize;
+//  z-index: 10;
+//  color: $formElement;
+//}

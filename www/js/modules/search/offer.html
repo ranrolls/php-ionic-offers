@@ -1,0 +1,111 @@
+<ion-view view-title="Offer Detail" class="searchOfferDetail">
+
+  <ion-content>
+
+    <div class="head">
+
+      <div class="posAbsolute width100 fontSize28 margin-0 padding-0" style="bottom: 10px; left: 0px;">
+        <div class="width100 posRelative fontSize30 margin-0 padding-0 iconDiv">
+
+          <!--<div class="inline margin-0 text-center" on-touch="soc.social()">-->
+            <!--<i class="icon ion-social-whatsapp-outline"></i>-->
+          <!--</div>-->
+
+          <div class="inline margin-0 text-center detail-rating">
+            <span class="" ng-if="soc.c.rating < 1"> - - </span>
+            <span ng-if="soc.c.rating > 0">{{soc.c.rating}}<i class="icon ion-android-star"></i></span>
+          </div>
+
+          <div class="inline margin-0 text-center" on-touch="soc.toggleFav()">
+            <i class="icon ion-ios-heart-outline" ng-if="soc.c.fav < 1"></i>
+            <i class="icon ion-ios-heart" ng-if="soc.c.fav > 0"></i>
+          </div>
+
+          <div class="inline margin-0 text-center padding-5" ng-bind="soc.c.disc">
+          </div>
+
+          <!--<div class="inline margin-0 text-center" on-touch="soc.share()">-->
+            <!--<i class="icon ion-share"></i>-->
+          <!--</div>-->
+
+        </div>
+      </div>
+
+      <div class="row detail color-white text-center">
+        <div class="col">
+          <span class="fontSize24 fontWeight500" ng-bind="soc.c.shortDesc"></span><br>{{soc.c.lTime}}
+        </div>
+      </div>
+
+      <img ng-src="{{soc.c.offerLogo}}">
+
+    </div>
+
+    <div class="row border-down">
+      <div class="col">
+        <h4>Offer Details</h4>
+
+        <p ng-bind="soc.c.offerDet"></p>
+      </div>
+    </div>
+
+    <div class="row border-down">
+      <div class="col">
+        <h4>Nearby Stores</h4>
+
+        <p ng-bind="soc.c.offerAddress"></p>
+
+        <div class="map posRelative" on-touch="soc.map('{{soc.c.location_lat}}', '{{soc.c.location_long}}')">
+          <img class="width100" src="{{soc.c.offerLogoThumb}}">
+
+          <div class="dist posAbsolute" ng-bind="soc.c.dist"></div>
+          <div class="dir posAbsolute"><i class="icon ion-ios-navigate-outline"></i></div>
+        </div>
+
+        <div class="item item-icon-left border-0" ng-if="soc.c.phone.length > 1">
+          <i class="icon ion-ios-telephone-outline"></i>
+          {{soc.c.phone}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row border-down detail-rating" ng-if="soc.c.rating > 1">
+      <div class="col">
+        <h4>Rate Offers</h4>
+        <div class="text-center fontSize30">
+          <i class="icon ion-android-star-outline inline" ng-if="soc.c.rating < 1"></i>
+          <i class="icon ion-android-star inline" ng-if="soc.c.rating > 0"></i>
+          <i class="icon ion-android-star-outline inline" ng-if="soc.c.rating < 2"></i>
+          <i class="icon ion-android-star inline" ng-if="soc.c.rating > 1"></i>
+          <i class="icon ion-android-star-outline inline" ng-if="soc.c.rating < 3"></i>
+          <i class="icon ion-android-star inline" ng-if="soc.c.rating > 2"></i>
+          <i class="icon ion-android-star-outline inline" ng-if="soc.c.rating < 4"></i>
+          <i class="icon ion-android-star inline" ng-if="soc.c.rating > 3"></i>
+          <i class="icon ion-android-star-outline inline" ng-if="soc.c.rating < 5"></i>
+          <i class="icon ion-android-star inline" ng-if="soc.c.rating > 4"></i>
+        </div>
+        <p class="text-center" ng-if="soc.c.rating < 1">No reviews exist for this offer. Be the first to review?</p>
+      </div>
+    </div>
+
+    <div class="row border-down" ng-if="soc.c.rt.length > 0">
+      <div class="col">
+        <h4>Related Tags</h4>
+
+        <div class="tag positive-bg color-white inline">Happy Hours</div>
+        <div class="tag positive-bg color-white inline">Alcohol</div>
+        <div class="tag positive-bg color-white inline">Wines</div>
+      </div>
+    </div>
+
+    <div class="row" ng-if="soc.c.tac.length > 0">
+      <div class="col">
+        <h4>Terms & Conditions</h4>
+
+        <p ng-repeat="i in soc.c.tac track by $index">{{$index + 1}}. {{i.val}}</p>
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>

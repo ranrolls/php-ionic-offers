@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html scrollbar-x="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>Offer Near Me</title>
+
+  <!--
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  -->
+
+  <link rel="stylesheet" href="lib/angular-toastr/dist/angular-toastr.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--
+  IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  -->
+
+  <link rel="stylesheet" href="css/ionic.app.min.css">
+  <!--<link rel="stylesheet" href="http://onm.socialcircle.marketing/templates/beez3/css/web-global.css">-->
+
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="cordova_plugins.js"></script>
+
+  <!-- ionic/angularjs js -->
+  <script type="text/javascript" src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <script type="text/javascript" src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+
+  <!--
+  <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="lib/angular-cache/dist/angular-cache.min.js"></script>
+  <script type="text/javascript" src="lib/angular-lazy-img/release/angular-lazy-img.min.js"></script>
+  -->
+
+
+  <script type="text/javascript" src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="lib/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+  <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+
+  <!--
+  <script type="text/javascript" src="lib/ionic-image-lazy-load/ionic-image-lazy-load.js"></script>
+  -->
+  <!--
+  <script type="text/javascript" src="lib/hammerjs/hammer.min.js"></script>
+  <script type="text/javascript" src="lib/angular-gestures/gestures.min.js"></script>
+  <script type="text/javascript" src="lib/ryanmullins-angular-hammer/angular.hammer.min.js"></script>
+-->
+  <!--<script type="text/javascript" src="lib/ngCordova/dist/ng-cordova.min.js"></script>-->
+
+  <!-- your app's js -->
+  <script type="text/javascript" src="js/service.js"></script>
+  <script type="text/javascript" src="js/appSql.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/run.js"></script>
+
+  <!-- services -->
+  <script type="text/javascript" src="js/services/system/help.js"></script>
+  <script type="text/javascript" src="js/services/system/sql.js"></script>
+  <script type="text/javascript" src="js/services/system/cordova.js"></script>
+  <script type="text/javascript" src="js/services/system/pushP.js"></script>
+
+  <script type="text/javascript" src="js/services/app/set.js"></script>
+  <script type="text/javascript" src="js/services/app/gety.js"></script>
+  <script type="text/javascript" src="js/services/app/url.js"></script>
+  <script type="text/javascript" src="js/services/app/gvar.js"></script>
+  <script type="text/javascript" src="js/services/app/error.js"></script>
+
+  <script type="text/javascript" src="js/services/modules/user.js"></script>
+  <script type="text/javascript" src="js/services/modules/filter.js"></script>
+  <script type="text/javascript" src="js/services/modules/catSql.js"></script>
+  <script type="text/javascript" src="js/services/modules/cat.js"></script>
+  <script type="text/javascript" src="js/services/modules/product.js"></script>
+  <script type="text/javascript" src="js/services/modules/store.js"></script>
+  <script type="text/javascript" src="js/services/modules/search.js"></script>
+
+  <!-- modules -->
+  <script type="text/javascript" src="js/controllers.js"></script>
+  <script type="text/javascript" src="js/configuration.js"></script>
+  <script type="text/javascript" src="js/routeConfig.js"></script>
+
+  <script type="text/javascript" src="js/modules/app/config.js"></script>
+  <script type="text/javascript" src="js/modules/app/ctrl.js"></script>
+  <script type="text/javascript" src="js/modules/app/startCtrl.js"></script>
+  <script type="text/javascript" src="js/modules/app/dbInitCtrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/tutorial/config.js"></script>
+  <script type="text/javascript" src="js/modules/tutorial/ctrl.js"></script>
+  <script type="text/javascript" src="js/modules/tutorial/uiCtrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/filter/config.js"></script>
+  <script type="text/javascript" src="js/modules/filter/ctrl.js"></script>
+  <script type="text/javascript" src="js/modules/filter/catCtrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/list/config.js"></script>
+  <script type="text/javascript" src="js/modules/list/ctrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/search/config.js"></script>
+  <script type="text/javascript" src="js/modules/search/ctrl.js"></script>
+  <script type="text/javascript" src="js/modules/search/searchOfferCtrl.js"></script>
+  <script type="text/javascript" src="js/modules/search/searchStoreCtrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/settings/config.js"></script>
+  <script type="text/javascript" src="js/modules/settings/ctrl.js"></script>
+  <script type="text/javascript" src="js/modules/settings/settingsDetailCtrl.js"></script>
+  <script type="text/javascript" src="js/modules/settings/settingsContactCtrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/notify/config.js"></script>
+  <script type="text/javascript" src="js/modules/notify/ctrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/uac/config.js"></script>
+  <script type="text/javascript" src="js/modules/uac/ctrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/login/ctrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/map/config.js"></script>
+  <script type="text/javascript" src="js/modules/map/mapCtrl2.js"></script>
+
+  <script type="text/javascript" src="js/modules/map/ctrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/signup/config.js"></script>
+  <script type="text/javascript" src="js/modules/signup/ctrl.js"></script>
+
+  <script type="text/javascript" src="js/modules/test/config.js"></script>
+  <script type="text/javascript" src="js/modules/test/ctrl.js"></script>
+
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+
+</head>
+<body ng-app="starter">
+
+<script type="text/javascript">
+  function ht() {
+//    console.log('hideTut');
+    document.getElementById('tut').style.display = 'none';
+  }
+//  document.getElementById('listSearchToggle').style.display = 'none';
+</script>
+
+<!--<img src="img/is.png" id="tut" style="z-index: 99;" class="posAbsolute top0 width100" onclick="ht()" />-->
+<!--<span class="searchListButtonIcon" id="listSearchToggle">-->
+      <!--<i class="icon ion-android-search"></i>-->
+      <!--<input class="searchKey" type="text"/>-->
+    <!--</span>-->
+
+<ion-nav-view></ion-nav-view>
+
+<ion-nav-bar class="bar-stable">
+
+    <!--<span class="searchListButtonIcon" id="listSearchToggle">-->
+      <!--<i class="icon ion-android-search"></i>-->
+      <!--<input class="searchKey" id="searchkeyText" type="text"/>-->
+    <!--</span>-->
+
+  <!--<input class="searchListButtonIcon" id="listSearchToggle" />-->
+  <i class="icon ion-android-search searchListButtonIcon" id="listSearchToggle"></i>
+
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+</body>
+</html>

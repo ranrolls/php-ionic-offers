@@ -1,0 +1,108 @@
+<ion-view view-title="{{title}}" class="listPage">
+
+  <div class="has-header has-tabs listTopTabs">
+    <!--<img class="logo" src="img/ui-assets/logo.gif">-->
+    <span on-touch="lc.resetCatWidth()" ng-click="lc.selectedCat('-1')">
+      <img class="all" src="img/all.png">
+        </span>
+
+    <ion-scroll zooming="false" scrollbar-x="false"
+                direction="x"
+                style="">
+      <div on-touch="lc.resetCatWidth()" id="navItem" class=""
+           style="width: {{lc.navWidth}}px;">
+        <span ng-click="lc.selectedCat(i)"
+              class="inline border-0 navBtn"
+              ng-repeat="i in lc.cats track by $index">
+            <img class="block" ng-if="!i.active" style="margin: 0 auto; max-width: 50px;" ng-src="{{i.categoryImage}}">
+            <img class="block" ng-if="i.active" style="margin: 0 auto; max-width: 50px;" ng-src="{{i.categoryImageA}}">
+            <span class="margin-0 padding-0 fontSize12 fontWeight500" style="margin: 0px !important; padding: 0px 5px;"> {{i.categoryName}} </span>
+        </span>
+      </div>
+    </ion-scroll>
+  </div>
+
+  <ion-content class="" style="margin-top:50px">
+<span ng-if="lc.all" class="margin-vertical-10" style="overflow: hidden; display: block; margin-right: 10px;">
+  <div class="exOffer color-text" ng-if="lc.showExOffer" style="max-width: 100%;">
+    <h1 class="color-text">LATEST OFFER</h1>
+    <h3 class="color-text">You saved the offer</h3>
+    <div class="padding-0" style="padding: 0px !important; max-width: 100%; width: 100%; position: relative">
+      <div class="width-30"
+           style="width: 30%; min-width: 30%; max-width: 30%; position: relative; overflow: hidden; background-size: cover;
+               background-image: url('{{lc.allItems[3].offerLogo}}'); background-color: black; display: inline; float: left; ">
+        <img ng-src="{{lc.allItems[3].offerLogo}}" class="" style="display: inline; visible: hidden; position: relative; max-width: 100%;" />
+      </div>
+      <div class="width-70" style="display: inline; float: right; padding-left: 10px;">
+        <h3 class="color-text">{{lc.allItems[3].offerName}}</h3>
+        <h5 class="color-text">{{lc.allItems[3].shortDesc}}</h5>
+      </div>
+    </div>
+    <h5 class="color-text" style="clear: both; " ng-bind="lc.allItems[3].offerDet"></h5>
+    <!--<p>Now show your love</p>-->
+  </div>
+    <ion-scroll direction="x" zooming="false" scrollbar-x="false"
+                delegate-handle="all" horizontal-scroll-fix="mainScroll"
+                class="padding-10 margin-top-20">
+
+      <span class="scroll-span" style="width: {{lc.allItems.length * 310 + 'px'}}; display: block;">
+        <div class="item-text-wrap inner"
+             style="background-image: url('{{j.offerLogo}}');"
+             ng-click="lc.detail('-1', {{j.offerID}})" ng-repeat="j in lc.allItems">
+          <h2 class="itemAtr itemName font">{{j.offerName}}</h2>
+
+          <p class="itemAtr itemDesc">{{j.shortDesc}}</p>
+
+          <p class="itemAtr itemRating" ng-if="j.rating > 0">
+            {{j.rating}}<i class="icon ion-android-star inline"></i>
+          </p>
+
+          <p class="itemAtr itemRating" ng-if="j.rating == 0">- -</p>
+
+          <p class="itemAtr itemDis" ng-if="j.disc.length > 1" ng-bind="j.disc"></p>
+
+        </div>
+        </span>
+    </ion-scroll>
+  </span>
+
+      <span class="" style="overflow: hidden; display: block;" ng-if="!lc.all">
+        <p ng-if="lc.noSubCat" class="margin-vertical-20 margin-horizontal-20">
+          No subcategories found near to your location in this category.
+        </p>
+        <p ng-if="lc.emptySubCats" class="margin-vertical-20 margin-horizontal-20">
+          All subcategories are empty for this category.
+        </p>
+        <div class="list" ng-if="!lc.noSubCat">
+          <div class="item" ng-repeat="i in lc.subCats track by $index" ng-if="!i.noProducts">
+            <span class="fontSize22 margin-vertical-10">{{i.subcategoryName}}</span>
+            <ion-scroll direction="x" zooming="false" scrollbar-x="false"
+                        delegate-handle="{{'h' + $index}}" horizontal-scroll-fix="mainScroll"
+                        ng-if="!lc.all" on-drag="lc.pushScItems()"
+                        class="margin-top-10 scroll-span">
+              <!--class="margin-top-10 scroll-span" ng-init="lc.handleScroll('h' + $index)">-->
+                <span class="scroll-span" style="width: {{i.products.length * 310 + 'px'}}; display: block;">
+                <div class="scrollItems posRelative inline item-text-wrap inner"
+                     style="background-image: url('{{j.offerLogo}}');"
+                     ng-click="lc.detail('{{i.subcatid}}', {{j.offerID}})" ng-repeat="j in i.products">
+                  <h2 class="itemAtr itemName font">{{j.offerName}}</h2>
+
+                  <p class="itemAtr itemDesc">{{j.shortDesc}}</p>
+
+                  <p class="itemAtr itemRating" ng-if="j.rating > 0">
+                    {{j.rating}}<i class="icon ion-android-star inline"></i>
+                  </p>
+
+                  <p class="itemAtr itemRating" ng-if="j.rating == 0">- -</p>
+
+                  <p class="itemAtr itemDis" ng-if="j.disc.length > 1" ng-bind="j.disc"></p>
+                </div>
+                  </span>
+            </ion-scroll>
+          </div>
+        </div>
+      </span>
+
+  </ion-content>
+
+</ion-view>

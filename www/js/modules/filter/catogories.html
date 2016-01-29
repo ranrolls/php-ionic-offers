@@ -1,0 +1,29 @@
+<ion-modal-view ng-controller="CatCtrl">
+  <ion-header-bar>
+    <h1 class="title">Categories</h1>
+    <button class="button button-clear color-primary" ng-click="passCats();">Done</button>
+  </ion-header-bar>
+  <ion-content>
+    <form class="form">
+      <div class="row">
+        <div class="col">
+          <ul class="list">
+            <li class="item item-checkbox" ng-repeat="cat in cats">
+              <label class="checkbox">
+                <input id="{{cat.name}}"
+                       type="checkbox"
+                       value="{{cat.name}}"
+                       ng-checked="selection.indexOf(cat.name) > -1"
+                       ng-click="toggleSelection(cat.name)" />
+              </label>
+              {{cat.name}}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </form>
+
+  </ion-content>
+
+</ion-modal-view>

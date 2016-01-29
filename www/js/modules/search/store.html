@@ -1,0 +1,108 @@
+<ion-view view-title="Store Detail" class="searchStoreDetail">
+
+  <ion-content>
+
+    <div class="positive-bg color-white padding-vertical posRelative">
+      <div class="width-30 inline fl padding-horizontal">
+        <img src="img/sd/foods/1.jpg" class="width100">
+      </div>
+      <div class="col-center width-70 inline fl padding-horizontal">
+        <span class="fontSize16 fontWeight500">heading 4</span>
+          <br>paragraph one
+          <br>paragraph two
+      </div>
+      <div class="col-100 clearfix">&nbsp;</div>
+    </div>
+    <div class="row border-down customTabs">
+
+      <div class="col text-center padding-vertical" ng-class="{'active' : ssc.type == 'offer'}" ng-click="ssc.toggleType('offer')">
+        0<br>Offers
+      </div>
+
+      <div class="col text-center padding-vertical" ng-class="{'active' : ssc.type == 'follower'}" ng-click="ssc.toggleType('follower')">
+        0<br>Followers
+      </div>
+
+      <div class="col text-center padding-vertical" ng-class="{'active' : ssc.type == 'store'}" ng-click="ssc.toggleType('store')">
+        0<br>All Stores
+      </div>
+
+    </div>
+
+    <div class="offers" ng-if="ssc.type == 'offer'">
+      <div class="list">
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Offer 1</h2>
+          <p>Offer Desc</p>
+        </span>
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Offer 2</h2>
+          <p>Offer Desc</p>
+        </span>
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Offer 3</h2>
+          <p>Offer Desc</p>
+        </span>
+
+      </div>
+    </div>
+
+    <div class="Followers" ng-if="ssc.type == 'follower'">
+      <div class="list">
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Follower 1</h2>
+          <p>Follower Desc</p>
+        </span>
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Follower 2</h2>
+          <p>Follower Desc</p>
+        </span>
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Follower 3</h2>
+          <p>Follower Desc</p>
+        </span>
+
+      </div>
+    </div>
+
+    <div class="Stores" ng-if="ssc.type == 'store'">
+      <div class="list">
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Store 1</h2>
+          <p>Store Desc</p>
+        </span>
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Store 2</h2>
+          <p>Store Desc</p>
+        </span>
+
+        <span class="item item-thumbnail-left" href="#">
+          <img src="img/sd/foods/1.jpg">
+          <h2>Store 3</h2>
+          <p>Store Desc</p>
+        </span>
+
+      </div>
+    </div>
+
+    <!--{{ssc.currentItem}}-->
+
+  </ion-content>
+
+</ion-view>

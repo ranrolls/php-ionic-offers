@@ -1,0 +1,21 @@
+<ion-content class="no-nav-tab tut" id="htTargetBox">
+  <img class="width100" src="img/ui-assets/user-detail-image.jpg" />
+  <div class="row">
+    <form class="col col-100 list" name="form" ng-submit="ui.submit(form);" novalidate>
+
+      <label class="item item-input margin-top-5">
+        <input type="text" ng-model="ui.form.name" name="name" placeholder="Name" required>
+      </label>
+      <label class="item item-input">
+        <input type="email" ng-model="ui.form.email" name="email" placeholder="Feedback Email" required>
+      </label>
+      <!--<label class="item item-input">-->
+      <!--<textarea ng-model="ui.form.msg" name="msg" placeholder="Message" style="min-height: 100px;"></textarea>-->
+      <!--</label>-->
+
+      <button class="button button-block button-positive" type="submit" ng-disabled="form.$invalid || !form.$dirty">Submit</button>
+      <!--<button class="button button-block button-positive" type="submit">Submit</button>-->
+
+    </form>
+  </div>
+</ion-content>

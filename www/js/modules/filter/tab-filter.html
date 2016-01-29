@@ -1,0 +1,58 @@
+<ion-view view-title="Filter">
+  <ion-content class="padding">
+    <form>
+
+      <div class="list card">
+        <div class="item item-divider">Area range ( 0 - 500 in meters ) {{form.range}}</div>
+        <div class="item item-body range">
+          <i class="icon ion-android-radio-button-off" ng-click="form.range = 0"></i>
+          <input type="range" ng-model="form.range" name="form.range" step="50" min="0" max="500" value="250" ng-change="updateSqlRadius()">
+          <i class="icon ion-android-radio-button-on" ng-click="form.range = 500"></i>
+        </div>
+      </div>
+
+      <div class="list card" ng-click="selectCategories();">
+        <div class="item item-divider item-icon-right">
+          Select categories
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </div>
+      </div>
+
+
+      <div class="list card">
+        <div class="item item-divider">Offer by</div>
+        <div class="list">
+
+          <label class="item item-radio">
+            <input type="radio" name="group" ng-model="form.offerBy" value="stores" ng-change="updateSqlOfferBy('stores')">
+            <div class="radio-content">
+              <div class="item-content">
+                Stores
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </div>
+          </label>
+
+          <label class="item item-radio">
+            <input type="radio" name="group" ng-model="form.offerBy" value="products" ng-change="updateSqlOfferBy('products')">
+            <div class="radio-content">
+              <div class="item-content">
+                Products
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+      <button class="button button-block button-positive" ng-click="showList();">
+        Show List
+      </button>
+      <button class="button button-block button-positive" ng-click="showLogin();">
+        Login
+      </button>
+
+    </form>
+  </ion-content>
+</ion-view>

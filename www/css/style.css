@@ -1,0 +1,10 @@
+/* Empty. Add your own CSS if you like */
+
+.posRel{
+  position: relative;
+}
+
+.filter-categories{
+  max-height: 200px;
+  overflow-x: scroll;
+}

@@ -1,0 +1,28 @@
+<ion-view view-title="Me" class="uac">
+  <ion-content>
+
+    <div class="row width100 profileBg" style="background-image: url('img/u/bg.jpg'); background-size: cover; min-height: 150px;">
+      <img src="img/u/pic.jpg" alt="" class="col-40 width-40 col-offset-30 col-center row-center"
+           style="margin-bottom: -50px; margin-top: 50px;"/>
+    </div>
+
+    <div class="row" style="margin-top: 45px;">
+      <div class="col text-center"><span class="fontWeight500 fontSize18">NAMER ISSIS</span><br/>London, UK</div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <i class="icon ion-location inline fontSize16"></i> Okhala Phase 1, New Delhi 110020
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-positive" ng-click="uc.showProfile()">Profile</button>
+        <button class="button button-block button-positive" ng-click="uc.showCurrentLocation">Current location</button>
+        <button class="button button-block button-positive" ng-click="uc.logout()">Logout</button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

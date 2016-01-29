@@ -1,0 +1,38 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+
+-->
+
+<!--<img src="img/is.png" alt="" id="is" class="posAbsolute top0 width100 zi10" />-->
+
+<ion-tabs class="tabs-icon-top tabs-color-active-positive tabs-bottom" style="bottom: 0px !important; position: fixed;">
+
+  <!-- Notify Tab -->
+  <ion-tab title="Notify" icon-off="ion-android-notifications-none" icon-on="ion-android-notifications" href="#/tab/notify">
+    <ion-nav-view name="tab-notify"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Me Tab -->
+  <!--<ion-tab title="Me" icon-off="ion-ios-contact-outline" icon-on="ion-ios-contact" href="#/tab/uac">-->
+    <!--<ion-nav-view name="tab-uac"></ion-nav-view>-->
+  <!--</ion-tab>-->
+
+  <!-- List Tab -->
+  <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/list">
+    <ion-nav-view name="tab-list"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Search Tab -->
+  <!--<ion-tab title="Search" icon-off="ion-search" icon-on="ion-search" href="#/tab/search">-->
+    <!--<ion-nav-view name="tab-search"></ion-nav-view>-->
+  <!--</ion-tab>-->
+
+  <!-- Settings Tab -->
+  <ion-tab title="More" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/settings">
+    <ion-nav-view name="tab-settings"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>

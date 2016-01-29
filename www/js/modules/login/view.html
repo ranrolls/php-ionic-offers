@@ -1,0 +1,69 @@
+<ion-modal-view ng-controller="LoginCtrl">
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+  </ion-header-bar>
+  <ion-content>
+    <form class="form">
+      <div class="row">
+        <div class="col">
+          <div class="list">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Email or mobile</span>
+              <input type="text" ng-model="us">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Password</span>
+              <input type="{{showpassword ? 'text' : 'password'}}" ng-model="pass">
+            </label>
+          </div>
+
+          <ul class="list list-borderless">
+            <li class="item item-toggle">
+              Show Password
+              <label class="toggle toggle-positive">
+                <input type="checkbox" ng-model="shP" name="showPass" ng-change="showpassword = !showpassword" ng-checked="shP">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </li>
+            <li class="item item-toggle">
+              Save Password
+              <label class="toggle toggle-positive">
+                <input type="checkbox" ng-model="sP" name="savePass" ng-checked="sP">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </li>
+            <li class="item item-toggle">
+              Keep Logged In
+              <label class="toggle toggle-positive">
+                <input type="checkbox" ng-model="kL" name="keepLogin" ng-checked="kL">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </li>
+          </ul>
+
+          <button class="button button-block button-positive" ng-click="loginUser();">
+            Login
+          </button>
+
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col text-center">
+        Not a user? <span ng-click="signUp()" class="positive">Sign Up</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <span ng-click="notNow()" class="positive">Not Now</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

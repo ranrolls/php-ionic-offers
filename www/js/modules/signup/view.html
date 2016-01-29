@@ -1,0 +1,71 @@
+<ion-view view-title="Sign Up">
+  <ion-content class="padding">
+    <form class="form">
+      <div class="row">
+        <div class="col">
+          <div class="list">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Name</span>
+              <input type="text" ng-model="us">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Email</span>
+              <input type="email" ng-model="email">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Mobile</span>
+              <input type="number" ng-model="mobile">
+            </label>
+            <div class="posRel">
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="{{showpassword ? 'text' : 'password'}}" ng-model="pass">
+
+              </label>
+              <span class="toggleInputType">
+                  <i class="icon" ng-click="showpassword = !showpassword"
+                     ng-class="{'ion-eye' : showpassword, 'ion-eye-disabled' : !showpassword}">
+                  </i>
+                </span>
+            </div>
+            <label class="item item-input">
+              <span class="input-label">Date of birth</span>
+              <input type="date" ng-model="dob">
+            </label>
+          </div>
+
+          <ul class="list list-borderless">
+            <li class="item item-toggle">
+              Agree Terms of Services
+              <label class="toggle toggle-positive">
+                <input type="checkbox" ng-model="service" name="service" ng-checked="service">
+
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </li>
+
+          </ul>
+
+          <button class="button button-block button-positive" ng-click="ping();">
+            Sign Up
+          </button>
+
+        </div>
+      </div>
+    </form>
+    <!--<div class="row">-->
+      <!--<div class="col text-center">-->
+        <!--Already Registered? <span ng-click="login()" class="positive">Login</span>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <div class="row">
+      <div class="col text-center">
+        <span ng-click="notNow()" class="positive">Not Now</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
